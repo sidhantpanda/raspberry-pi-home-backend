@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "raspberry-pi-backend",
   "version": "0.0.0",
   "private": true,
   "scripts": {
