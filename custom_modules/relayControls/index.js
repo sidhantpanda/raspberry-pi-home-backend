@@ -1,7 +1,7 @@
 const Gpio = require('onoff').Gpio;
 const async = require('async');
 const config = require('./config');
-const socketClient = require('./socketIO');
+// const socketClient = require('./socketIO');
 
 const GPIO_PINS = {};
 
@@ -44,9 +44,9 @@ module.exports = {
         }
       });
       config.saveConfig(BUTTONS);
-      socketClient.clientPromise.then(client => {
-        client.emit('button_update', { buttonData: BUTTONS });
-      })
+      // socketClient.clientPromise.then(client => {
+      //   client.emit('button_update', { buttonData: BUTTONS });
+      // })
       // initialzationPromise.then(() => {
       if (GPIO_PINS[buttonId] != null) {
         const val = status ? 0 : 1;
