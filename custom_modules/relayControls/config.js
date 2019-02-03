@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-const FILE_PATH = path.join('/home/pi/buttons.json');
+const FILE_PATH = path.join(__dirname, 'buttons.json');
 
 
 const DEFAULT_CONFIG = [

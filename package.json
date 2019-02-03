@@ -12,11 +12,16 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "google-auth-library": "^3.0.1",
     "http-errors": "~1.6.2",
     "jsonfile": "^5.0.0",
+    "mongoose": "^5.4.9",
     "morgan": "~1.9.0",
     "nodemon": "^1.18.5",
     "onoff": "^3.2.2",
-    "socket.io": "^2.1.1"
+    "passport": "^0.4.0",
+    "passport-auth-token": "^1.0.1",
+    "socket.io": "^2.1.1",
+    "uuid": "^3.3.2"
   }
 }
