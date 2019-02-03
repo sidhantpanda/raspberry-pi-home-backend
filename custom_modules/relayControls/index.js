@@ -31,16 +31,19 @@ module.exports = {
 
   setStatus: (buttonId, status) => {
     return new Promise((resolve, reject) => {
+      let thisButton = null;
       BUTTONS.forEach((button, index) => {
         if (button.id === buttonId) {
           BUTTONS[index] = {
             ...button,
             status: status
           };
+          thisButton = BUTTONS[index];
         }
       });
       config.saveConfig(BUTTONS);
       if (GPIO_PINS[buttonId] != null) {
+
         const val = status ? 0 : 1;
         // TODO uncomment this
         // GPIO_PINS[buttonId].write(val, err => {
@@ -52,11 +55,11 @@ module.exports = {
 
 
         // TODO remove mock resolve below
-        resolve({
-          id: buttonId,
-          status: status
-        });
       }
+      resolve({
+        ...thisButton,
+        pin: undefined
+      });
     });
   }
 }

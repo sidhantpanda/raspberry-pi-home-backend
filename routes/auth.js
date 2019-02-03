@@ -1,10 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
 const creds = require('/Users/sidhantpanda/.config/rasphome/credentials.json');
 const { OAuth2Client } = require('google-auth-library');
 const client = new OAuth2Client(creds.web.client_id);
+
 const AccessToken = require('../models/AccessToken');
 const User = require('../models/User');
+
 const uuidv4 = require('uuid/v4');
 
 async function getTokenDetails(token) {
