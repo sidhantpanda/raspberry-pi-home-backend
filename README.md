@@ -1,6 +1,9 @@
 # Raspberry Pi Home Backend
 This is a react based fronted for [Pi home frontend](https://github.com/sidhantpanda/raspberry-pi-home-frontend). This is a Express generated app.
 
+## Tutorial
+https://medium.com/@sidhantpanda/raspberry-pi-home-automation-with-google-assistant-integration-part-1-software-71b3b8904205
+
 ## Clone to your Pi
 ```
 git clone git@github.com:sidhantpanda/raspberry-pi-home-backend.git
